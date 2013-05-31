@@ -65,7 +65,7 @@ describe ActiveAdmin::Filters::ResourceExtension do
     }
     end
 
-    it "should raise an exception when filters are disabled" do
+    it "should raise an exception if trying to add a filter when they are disabled" do
       resource.filters = false
       expect {
         resource.add_filter :title
